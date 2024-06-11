@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+}
+
+.cursor {
+          display: inline-block;
+          width: 10px;
+          height: 20px;
+          background-color: lime;
+          animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+        
+          from,
+          to {
+            background-color: transparent
+          }
+        
+          50% {
+            background-color: lime;
+          }
+        }
+        
+        .scrolling-text {
+          overflow: hidden;
+          height: 400px;
+        }
+        
+        .scrolling-text p {
+          animation: scroll 10s linear infinite;
+        }
+        
+        @keyframes scroll {
+          0% {
+            transform: translateY(100%);
+          }
+        
+          100% {
+            transform: translateY(-100%);
+          }
+        }
